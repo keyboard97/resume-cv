@@ -1,0 +1,122 @@
+{
+  "name": "Adrián Rodríguez",
+  "title": "Software Engineer",
+  "contact": {
+    "location": "Andorra La Vella, Andorra",
+    "phone": "+376 370797",
+    "email": "adrianrdguez87@gmail.com",
+    "portfolio": "https://keyboard97.netlify.app",
+    "github": "https://github.com/keyboard97",
+    "linkedin": "https://linkedin.com/in/arodriguez797",
+    "address": "Carrer de Fiter i Rosell No.15 2-2, Andorra la Vella, Andorra"
+  },
+  "summary": "Innovative and proactive Fullstack Developer with a passion for creating elegant websites and application designs. Proven ability to manage complex programming projects and efficiently improve existing designs.",
+  "experience": [
+    {
+      "company": "Napptilus Tech Labs",
+      "companyUrl": "https://napptilus.com",
+      "location": "Barcelona, Spain",
+      "description": "I work on developing web platforms for startups, including StageInHome. This platform uses Machine Learning techniques to automatically transform empty or outdated spaces into cozy and attractive environments.",
+      "workType": "remote",
+      "role": "Fullstack Developer",
+      "date": {
+        "start": "October 2022",
+        "end": "Present"
+      },
+      "stack": ["React", "Vuejs", "Javascript", "Typescript", "C#", ".NET", "Astro"],
+      "projects": [
+        {
+          "name": "NAPPAI",
+          "description": "No-code app builder to create and integrate custom AI solutions.",
+          "url": "https://nappai.ai"
+        },
+        {
+          "name": "StageInHome",
+          "description": "Development of a comprehensive virtual staging solution.",
+          "url": "https://stageinhome.com"
+        },
+        {
+          "name": "TracksCO2 Monitoring App",
+          "description": "System for monitoring CO2 levels.",
+          "url": "https://monitoring.tracksco2.com"
+        },
+        {
+          "name": "Charger Management",
+          "description": "Platform for managing electric vehicle chargers."
+        }
+      ]
+    },
+    {
+      "company": "Aicros",
+      "companyUrl": "https://www.aicros.cu",
+      "location": "La Habana, Cuba",
+      "description": "I contributed to the development of the RegConst system, which is used for all worker registration and management tasks by the company and its subsidiaries under the Ministry of Construction in Cuba.",
+      "workType": "hybrid",
+      "role": "Frontend Developer",
+      "date": {
+        "start": "April 2022",
+        "end": "September 2022"
+      },
+      "stack": ["Angular", "Typescript", "NestJS", "GraphQL"],
+      "projects": [
+        {
+          "name": "RegConst System",
+          "description": "Contributed to the development of a worker management platform in Cuba focused on usability and efficiency.",
+          "url": "https://regconst.netcons.com.cu"
+        }
+      ]
+    },
+    {
+      "company": "Tecnomática",
+      "companyUrl": "https://tecnomatica.cupet.cu/es",
+      "location": "La Habana, Cuba",
+      "description": "I participated in the development and maintenance of the SISCONT6 system. This accounting system is used by all companies subordinate to the Ministry of Energy and Mines in Cuba.",
+      "workType": "onsite",
+      "role": "Fullstack Developer",
+      "date": {
+        "start": "January 2022",
+        "end": "September 2022"
+      },
+      "stack": ["Angular", "Typescript", "Javascript", "Java", "SpringBoot", "iReport"],
+      "projects": [
+        {
+          "name": "SISCONT6 Accounting System",
+          "description": "Developed a robust accounting system for the Cuban Ministry of Energy and Mines."
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Technological University of Havana José Antonio Echeverría (CUJAE)",
+      "location": "La Habana, Cuba",
+      "degree": "Software Engineering",
+      "date": {
+        "start": "2016",
+        "end": "2021"
+      }
+    }
+  ],
+  "skills": [
+    "Typescript",
+    "Javascript",
+    "HTML5",
+    "CSS3",
+    "React",
+    "Vuejs",
+    "Astro",
+    "Tailwind",
+    "C#",
+    ".NET",
+    "Java",
+    "SpringBoot"
+  ],
+  "strengths": [
+    "Fullstack development with modern technologies",
+    "Solving complex programming problems",
+    "Automation and Machine Learning integration",
+    "Effective project management",
+    "Collaboration in multidisciplinary teams",
+    "User interface optimization"
+  ]
+}

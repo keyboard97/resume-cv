@@ -1,0 +1,17 @@
+---
+import Printer from "@assets/icons/printer.svg";
+---
+
+<button
+  aria-label="print button"
+  id="print-button"
+  class="cursor-pointer p-1 aspect-square hover:bg-badge rounded-md"
+>
+  <Printer class="h-5" />
+</button>
+
+<script>
+  document.getElementById("print-button")?.addEventListener("click", () => {
+    window.print();
+  });
+</script>

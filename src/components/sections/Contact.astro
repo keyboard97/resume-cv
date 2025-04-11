@@ -1,0 +1,36 @@
+---
+import LinkIcon from "@components/ui/LinkIcon.astro";
+import Linkedin from "@/assets/icons/linkedin.svg";
+import Github from "@assets/icons/github.svg";
+import Mail from "@assets/icons/mail.svg";
+import BriefcaseBusiness from "@/assets/icons/briefcase-business.svg";
+
+import type { Resume } from "@/types/resume";
+
+const locale = (Astro.currentLocale as "en" | "es") == "en" ? "" : "es";
+const { contact } = Astro.props as { contact: Resume["contact"] };
+---
+
+<div class="flex print:flex-col justify-between items-center print:items-start">
+  <p class="text-xs font-light text-text-secondary">{contact.location}</p>
+  <div
+    class="flex print:flex-wrap gap-1 print:gap-2 items-center print:items-start text-text-secondary"
+  >
+    <LinkIcon href={`mailto:${contact.email}`} name="email">
+      <Mail class="w-4 stoke-1" />
+      <p class="text-[11px] ml-2 font-medium hidden print:block">{contact.email}</p>
+    </LinkIcon>
+    <LinkIcon href={contact.linkedin} name="linkedin">
+      <Linkedin class="w-4 stoke-1 fill-text-secondary" />
+      <p class="text-[11px] ml-2 font-medium hidden print:block">{contact.linkedin}</p>
+    </LinkIcon>
+    <LinkIcon href={contact.github} name="github">
+      <Github class="w-4 stoke-1 fill-text-secondary" />
+      <p class="text-[11px] ml-2 font-medium hidden print:block">{contact.github}</p>
+    </LinkIcon>
+    <LinkIcon href={`${contact.portfolio}/${locale}`} name="portfolio">
+      <BriefcaseBusiness class="w-4 stoke-1" />
+      <p class="text-[11px] ml-2 font-medium hidden print:block">{contact.portfolio}</p>
+    </LinkIcon>
+  </div>
+</div>

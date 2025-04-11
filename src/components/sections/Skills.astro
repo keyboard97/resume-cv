@@ -1,0 +1,29 @@
+---
+import SectionTitle from "@components/ui/SectionTitle.astro";
+import TwoColumsLayout from "@/layouts/TwoColumsLayout.astro";
+import type { Resume } from "@/types/resume";
+import Badge from "../ui/Badge.astro";
+import { useTranslations } from "@/i18n";
+
+const currentLocale = Astro.currentLocale as "en" | "es";
+const t = useTranslations(currentLocale);
+
+const { skills } = Astro.props as { skills: Resume["skills"] };
+---
+
+<section class="flex flex-col gap-8">
+  <TwoColumsLayout className="-mb-6">
+    <div slot="aside"></div>
+    <div slot="main" class="flex flex-col gap-2 justify-evenly h-full">
+      <SectionTitle>
+        {t("sections.skills")}
+      </SectionTitle>
+    </div>
+  </TwoColumsLayout>
+  <TwoColumsLayout className="[&&]:gap-2 md:[&&]:gap-12 print:[&&]:gap-12">
+    <div slot="aside"></div>
+    <div slot="main" class="flex gap-2 flex-wrap items-center">
+      {skills.map((skill) => <Badge>{skill}</Badge>)}
+    </div>
+  </TwoColumsLayout>
+</section>

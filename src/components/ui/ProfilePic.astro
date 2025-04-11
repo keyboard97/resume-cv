@@ -1,0 +1,14 @@
+---
+import ProfilePicture from "@assets/imgs/profile.webp";
+import { Image } from "astro:assets";
+---
+
+<Image
+  src={ProfilePicture}
+  class="w-full bg-badge rounded-xl aspect-square shadow-xl max-w-48"
+  alt="Adrián Rodríguez"
+  aria-label="profile picture"
+  decoding="async"
+  width={192}
+  height={192}
+/>

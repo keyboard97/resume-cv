@@ -1,0 +1,40 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const currentLanguage = Astro.currentLocale;
+
+const languageOptions = [
+  { code: "en", label: "EN" },
+  { code: "es", label: "ES" },
+];
+
+const languageUrls = languageOptions.map((lang) => ({
+  ...lang,
+  url: getRelativeLocaleUrl(lang.code),
+}));
+---
+
+<select
+  id="language-selector"
+  class="cursor-pointer px-1 py-1.5 text-sm font-extrabold text-text-primary hover:bg-badge bg-background rounded-md"
+>
+  {
+    languageUrls.map(({ code, label, url }) => (
+      <option
+        aria-label="language-selector-option"
+        value={url}
+        selected={currentLanguage === code}
+        class="font-bold"
+      >
+        {label}
+      </option>
+    ))
+  }
+</select>
+
+<script type="module">
+  document.getElementById("language-selector")?.addEventListener("change", (event) => {
+    const selectedUrl = event.target.value;
+    window.location.href = selectedUrl;
+  });
+</script>

@@ -1,0 +1,10 @@
+---
+const { className } = Astro.props;
+---
+
+<div
+  class={`flex flex-col md:grid md:grid-cols-[180px_1fr] md:gap-12 print:grid print:grid-cols-[180px_1fr] print:gap-12 gap-8 ${className}`}
+>
+  <slot name="aside" />
+  <slot name="main" />
+</div>

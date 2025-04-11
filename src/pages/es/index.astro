@@ -1,0 +1,26 @@
+---
+import type { Resume as ResumeType } from "@/types/resume";
+import resumeJSON from "@assets/resume/es.json";
+
+import Layout from "@/layouts/Layout.astro";
+import Resume from "@/components/sections/Resume.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Education from "@/components/sections/Education.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Toolbar from "@/components/ui/Toolbar.astro";
+
+const resume: ResumeType = resumeJSON;
+---
+
+<Layout>
+  <Toolbar />
+  <Resume
+    name={resume.name}
+    title={resume.title}
+    summary={resume.summary}
+    contact={resume.contact}
+  />
+  <Experience experience={resume.experience} />
+  <Education education={resume.education} />
+  <Skills skills={resume.skills} />
+</Layout>

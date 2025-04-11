@@ -1,0 +1,22 @@
+---
+import TwoColumsLayout from "@/layouts/TwoColumsLayout.astro";
+import { Image } from "astro:assets";
+
+import Contact from "./Contact.astro";
+import type { Resume } from "@/types/resume";
+import ProfilePic from "../ui/ProfilePic.astro";
+
+const { name, title, summary, contact } = Astro.props as Resume;
+---
+
+<TwoColumsLayout>
+  <ProfilePic slot="aside" />
+
+  <div slot="main" class="flex flex-col gap-1 justify-evenly h-full">
+    <h1 class="text-3xl font-bold">{name}</h1>
+    <h2 class="text-xl font-medium">{title}</h2>
+    <p class="text-sm text-text-secondary">{summary}</p>
+
+    <Contact contact={contact} />
+  </div>
+</TwoColumsLayout>

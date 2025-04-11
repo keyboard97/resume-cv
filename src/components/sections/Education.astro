@@ -1,0 +1,45 @@
+---
+import TwoColumsLayout from "@/layouts/TwoColumsLayout.astro";
+import type { Resume } from "@/types/resume";
+import SectionTitle from "../ui/SectionTitle.astro";
+import { useTranslations } from "@/i18n";
+
+const currentLocale = Astro.currentLocale as "en" | "es";
+const t = useTranslations(currentLocale);
+
+const { education } = Astro.props as { education: Resume["education"] };
+
+const getCenterName = (fullName: string) => {
+  const name = fullName.substring(0, fullName.indexOf("("));
+  const abbr = fullName.substring(fullName.indexOf("(") + 1, fullName.indexOf(")"));
+
+  return { name, abbr };
+};
+---
+
+<section class="flex flex-col gap-8">
+  <TwoColumsLayout className="-mb-6">
+    <div slot="aside"></div>
+    <div slot="main" class="flex flex-col gap-2 justify-evenly h-full">
+      <SectionTitle>
+        {t("sections.education")}
+      </SectionTitle>
+    </div>
+  </TwoColumsLayout>
+  {
+    education.map((item) => (
+      <TwoColumsLayout className="flex-col-reverse [&&]:gap-2 md:[&&]:gap-12 print:[&&]:gap-12">
+        <div slot="aside">
+          <p class="text-xs font-semibold">{item.institution}</p>
+          <p class="text-xs italic">{item.location}</p>
+          <p class="text-xs italic">
+            {item.date.start} - {item.date.end}
+          </p>
+        </div>
+        <div slot="main">
+          <h4 class="text-xl font-semibold">{item.degree}</h4>
+        </div>
+      </TwoColumsLayout>
+    ))
+  }
+</section>
