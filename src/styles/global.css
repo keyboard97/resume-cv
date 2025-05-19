@@ -37,7 +37,7 @@ body > section {
 
 @media print {
   body {
-    @apply [&&]:my-14;
+    @apply [&&]:-my-4;
   }
   .dark {
     --color-background: #f5f5f5;
