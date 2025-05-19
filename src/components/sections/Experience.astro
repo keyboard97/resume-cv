@@ -16,7 +16,7 @@ const { experience } = Astro.props as { experience: Resume["experience"] };
     <div slot="aside"></div>
     <div slot="main" class="flex flex-col gap-2 justify-evenly h-full">
       <SectionTitle>
-        {t("sections.experience")}
+        {t("sections.experience.title")}
       </SectionTitle>
     </div>
   </TwoColumsLayout>
@@ -48,7 +48,7 @@ const { experience } = Astro.props as { experience: Resume["experience"] };
           <h4 class="text-xl font-semibold">{exp.role}</h4>
           <p class="text-sm text-text-secondary">{exp.description}</p>
 
-          <p class="font-medium text-sm -mb-2">Key Projects:</p>
+          <p class="font-medium text-sm -mb-2">{t("sections.experience.key_projects")}:</p>
           <ul class="text-sm list-disc ">
             {exp.projects.map((project) => (
               <li class="ml-4">
@@ -64,7 +64,8 @@ const { experience } = Astro.props as { experience: Resume["experience"] };
             ))}
           </ul>
           <p class="text-xs font-medium">
-            Technologies: <span class="font-light text-text-secondary">{exp.stack.join(", ")}</span>
+            {t("sections.experience.technologies")}:
+            <span class="font-light text-text-secondary">{exp.stack.join(", ")}</span>
           </p>
         </div>
       </TwoColumsLayout>

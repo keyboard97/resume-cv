@@ -1,8 +1,12 @@
 export const es = {
   sections: {
-    experience: "Experiencia",
-    education: "Educación",
-    skills: "Habilidades",
-    strengths: "Fortalezas",
+    experience: {
+      title: "Experiencia",
+      key_projects: "Proyectos Clave",
+      technologies: "Tecnologías",
+    },
+    education: { title: "Educación" },
+    skills: { title: "Habilidades" },
+    strengths: { title: "Fortalezas" },
   },
 };
